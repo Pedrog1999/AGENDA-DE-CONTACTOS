@@ -1,0 +1,154 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #bda8a8;
+    color: #333;
+}
+
+.header {
+    background: #3f4246;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+/* Formulario */
+.form-section {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.btn-agregar {
+    background: #4e4c47;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-agregar:hover {
+    background: #020202;
+}
+
+
+.list-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.contact-table th, .contact-table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.contact-table th {
+    background: #f1f1f1;
+}
+
+.btn-editar {
+    background: #4e4c47;
+    border: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn-eliminar {
+    background: #4e4c47;
+    border: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-editar:hover {
+    background: #070707;
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background: #c82333;
+
+}
+
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    background: #f1f1f1;
+    font-size: 0.9rem;
+}
+.github-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #24292f; 
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.github-button:hover {
+  background-color: #444c56;
+  transform: translateY(-2px);
+}
+
+.github-button svg {
+  fill: currentColor;
+}

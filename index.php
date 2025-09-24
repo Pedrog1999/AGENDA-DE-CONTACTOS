@@ -7,7 +7,6 @@ $controllerPath = 'controllers/';
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,6 +16,7 @@ $controllerPath = 'controllers/';
     <link rel="stylesheet" href="assets/style.css">
    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 </head>
 <body>
@@ -46,7 +46,7 @@ $controllerPath = 'controllers/';
                     <label for="direccion">Dirección</label>
                     <input type="text" id="direccion" name="direccion" placeholder="Ej: Barrio de Juan">
                 </div>
-                <button type="submit" class="btn-agregar">➕ Agregar</button>
+                <button type="submit" class="btn-agregar animate__animated">➕ Agregar</button>
             </form>
         </section>
 
@@ -73,8 +73,8 @@ $controllerPath = 'controllers/';
                                 <td><?= htmlspecialchars($c['email']) ?></td>
                                 <td><?= htmlspecialchars($c['direccion']) ?></td>
                                 <td>
-                                    <a href="<?= $controllerPath ?>ModificarUsuario.php?id=<?= $c['id'] ?>" class="btn-editar">✏️ Editar</a>
-                                   <a href="<?= $controllerPath ?>BajaUsuario.php?id=<?= $c['id'] ?>" class="btn-eliminar">🗑️ Eliminar</a>
+                                    <a href="<?= $controllerPath ?>ModificarUsuario.php?id=<?= $c['id'] ?>" class="btn-editar animate__animated">✏️ Editar</a>
+                                   <a href="<?= $controllerPath ?>BajaUsuario.php?id=<?= $c['id'] ?>" class="btn-eliminar animate__animated">🗑️ Eliminar</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -90,7 +90,7 @@ $controllerPath = 'controllers/';
 
     <footer class="footer">
         
-        <div class="github-container">
+        <div>
             <a href="https://github.com/Pedrog1999/AGENDA-DE-CONTACTOS" target="_blank" class="github-button">
                 <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 
@@ -112,6 +112,18 @@ $controllerPath = 'controllers/';
             </a>
         </div>
     </footer>
+<script>
+  const effects = ["rubberBand", "pulse", "swing", "jello", "tada"];
+  const githubBtn = document.querySelector(".github-button");
 
+  githubBtn.addEventListener("mouseenter", () => {
+    const randomEffect = effects[Math.floor(Math.random() * effects.length)];
+    githubBtn.classList.add("animate__animated", "animate__" + randomEffect);
+
+    githubBtn.addEventListener("animationend", () => {
+      githubBtn.classList.remove("animate__animated", "animate__" + randomEffect);
+    }, { once: true });
+  });
+</script>
 </body>
 </html>

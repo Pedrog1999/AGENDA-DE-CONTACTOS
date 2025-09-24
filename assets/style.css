@@ -27,7 +27,7 @@ body {
     color: white;
 }
 
-@keyframes typing {
+@keyframes typing { 
     from { width: 0; }
     to { width: 100%; }
 }
@@ -123,10 +123,33 @@ h2 {
     margin-top: 2rem;
     background: #f1f1f1;
     font-size: 0.9rem;
+
 }
-.github-container {
-    text-align: center;
-    margin-top: 40px;
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #24292f; 
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  position: relative;
 }
+
+.github-button:hover {
+  background-color: #444c56;
+}
+
+.btn-editar:hover,
+.btn-eliminar:hover,
+.btn-agregar:hover {
+    animation: rubberBand 1s;
+}
+
 
 

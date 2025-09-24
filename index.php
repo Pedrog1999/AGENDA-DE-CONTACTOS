@@ -79,8 +79,8 @@ $controllerPath = 'controllers/';
                                 <td><?= htmlspecialchars($c['email']) ?></td>
                                 <td><?= htmlspecialchars($c['direccion']) ?></td>
                                 <td>
-                                    <a href="<?= $controllerPath ?>ModificarUsuario.php?id=<?= $c['id'] ?>" class="btn btn-warning btn-sm">✏️ Editar</a>
-                                   <a href="<?= $controllerPath ?>BajaUsuario.php?id=<?= $c['id'] ?>" class="btn btn-danger btn-sm">🗑️ Eliminar</a>
+                                    <a href="<?= $controllerPath ?>ModificarUsuario.php?id=<?= $c['id'] ?>" class="btn-editar">✏️ Editar</a>
+                                   <a href="<?= $controllerPath ?>BajaUsuario.php?id=<?= $c['id'] ?>" class="btn-eliminar">🗑️ Eliminar</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

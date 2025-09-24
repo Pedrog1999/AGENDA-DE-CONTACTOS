@@ -6,14 +6,7 @@ $contactos = obtenerContactos($pdo);
 $controllerPath = 'controllers/';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda de contactos</title>
-</head>
-<body>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -24,10 +17,11 @@ $controllerPath = 'controllers/';
     <link rel="stylesheet" href="assets/style.css">
    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
     <header class="header">
-        <h1>Agenda de Contactos</h1>
+     <h1 class="typing">Agenda de Contactos</h1>
     </header>
 
     <main class="container">
@@ -38,19 +32,19 @@ $controllerPath = 'controllers/';
             <form method="POST" action="controllers/AltaUsuario.php" id="contact-form">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Homero" required>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan" required>
                 </div>
                 <div class="form-group">
                     <label for="telefono">Teléfono</label>
-                    <input type="text" id="telefono" name="telefono" placeholder="Ej: 11-2345-6789" required>
+                    <input type="text" id="telefono" name="telefono" placeholder="Ej: 2352-2532" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Correo</label>
-                    <input type="email" id="email" name="email" placeholder="Ej: homero@springfield.com" required>
+                    <input type="email" id="email" name="email" placeholder="Ej: juan@chacabuco.com" required>
                 </div>
                 <div class="form-group">
                     <label for="direccion">Dirección</label>
-                    <input type="text" id="direccion" name="direccion" placeholder="Ej: Av. Siempre Viva 742">
+                    <input type="text" id="direccion" name="direccion" placeholder="Ej: Barrio de Juan">
                 </div>
                 <button type="submit" class="btn-agregar">➕ Agregar</button>
             </form>

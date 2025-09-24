@@ -1,3 +1,11 @@
+<?php
+require_once __DIR__ . "/models/funciones.php";
+$contactos = obtenerContactos($pdo);
+?>
+<?php
+$controllerPath = 'controllers/';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +35,7 @@
         <section class="form-section">
             <h2>Agregar Contacto</h2>
             <br>
-            <form id="contact-form">
+            <form method="POST" action="controllers/AltaUsuario.php" id="contact-form">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Ej: Homero" required>
@@ -63,26 +71,24 @@
                 </thead>
                 <tbody>
                     
-                    <tr>
-                        <td>Homero Simpson</td>
-                        <td>11-2345-6789</td>
-                        <td>homero@springfield.com</td>
-                        <td>Av. Cabildo 123123</td>
-                        <td>
-                            <button class="btn-editar">✏️ Editar</button>
-                            <button class="btn-eliminar">🗑️ Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Marge Simpson</td>
-                        <td>11-8765-4321</td>
-                        <td>marge@springfield.com</td>
-                        <td>Av. Siempre Viva 742</td>
-                        <td>
-                            <button class="btn-editar">✏️ Editar</button>
-                            <button class="btn-eliminar">🗑️ Eliminar</button>
-                        </td>
-                    </tr>
+                    <?php if (!empty($contactos)): ?>
+                        <?php foreach ($contactos as $c): ?>
+                            <tr>
+                                <td><?= htmlspecialchars($c['nombre']) ?></td>
+                                <td><?= htmlspecialchars($c['telefono']) ?></td>
+                                <td><?= htmlspecialchars($c['email']) ?></td>
+                                <td><?= htmlspecialchars($c['direccion']) ?></td>
+                                <td>
+                                    <a href="<?= $controllerPath ?>ModificarUsuario.php?id=<?= $c['id'] ?>" class="btn btn-warning btn-sm">✏️ Editar</a>
+                                   <a href="<?= $controllerPath ?>BajaUsuario.php?id=<?= $c['id'] ?>" class="btn btn-danger btn-sm">🗑️ Eliminar</a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <tr>
+                            <td colspan="5" class="text-center">No hay contactos cargados.</td>
+                        </tr>
+                    <?php endif; ?>
                 </tbody>
             </table>
         </section>

@@ -8,10 +8,16 @@ body {
 }
 
 .header {
+    font-family:monospace;
     background: #3f4246;
     color: white;
     text-align: center;
     padding: 1.5rem;
+    font-weight: bold;
+    font-size: 16px;
+    gap: 8px;
+    text-decoration: none;
+    
 }
 
 .container {
@@ -25,7 +31,6 @@ h2 {
     color: #007bff;
 }
 
-/* Formulario */
 .form-section {
     background: white;
     padding: 1.5rem;
@@ -52,17 +57,23 @@ h2 {
 }
 
 .btn-agregar {
-    background: #4e4c47;
-    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #24292f; 
+    padding: 10px 20px;
+    border-radius: 8px;
     border: none;
-    padding: 0.7rem 1.2rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.2s;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-agregar:hover {
     background: #020202;
+    transform: translateY(-2px);
 }
 
 
@@ -89,30 +100,44 @@ h2 {
 }
 
 .btn-editar {
-    background: #4e4c47;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #24292f; 
+    padding: 10px 20px;
+    border-radius: 8px;
     border: none;
-    padding: 0.5rem 0.9rem;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-right: 5px;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-eliminar {
-    background: #4e4c47;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #24292f; 
+    padding: 10px 20px;
+    border-radius: 8px;
     border: none;
-    padding: 0.5rem 0.9rem;
-    border-radius: 6px;
-    cursor: pointer;
-    color: white;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-editar:hover {
     background: #070707;
     color: white;
+    transform: translateY(-2px);
 }
 
 .btn-eliminar:hover {
     background: #c82333;
+    transform: translateY(-2px);
 
 }
 
